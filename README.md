@@ -20,7 +20,7 @@ int main()
   ret = 1;
   while (ret > 0)
   {
-    get_next_line(fd, &line);
+    ret = get_next_line(fd, &line);
     printf("ret = [%i]\t[%s]", ret, line);
     free(line);
   }
