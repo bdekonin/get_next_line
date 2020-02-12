@@ -14,7 +14,7 @@ int main()
 {
   int fd;
   int ret;
-  int *line;
+  char *line;
   
   fd = open("textfile.txt", O_RDONLY);
   ret = 1;
