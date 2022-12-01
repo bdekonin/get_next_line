@@ -1,13 +1,28 @@
-# Get_next_line - @ Codam Coding College
-Function that will recieve an File Descriptor and will read line by line.
-Once a newline has been found, it will copy everything from the buf into the line.
-It will use an function to move everything after a '\n' to the front (including the '\0').
+# Get_next_line
 
+This guide explains how to write an algorithm to read a line from a file descriptor using the `read` system call.
 
-#### How do I use it?
-This has been one of the few projects where I did not need to use an Makefile.
-If you compile your project with the `get_next_line.c` & `get_next_line_utils.c` and also include `get_next_line.h` in your project,
-you will be able to use these functions. I will include an easy to read main so you can see how it has been called.
+## Prerequisites
+
+- Knowledge of the `read` system call and its parameters
+- Familiarity with file descriptors
+
+## Algorithm
+
+1. Set up the `read` system call, passing in a file descriptor, a buffer and a byte count.
+2. Create a loop that keeps running until the byte count is reached.
+3. Read the next byte from the file descriptor.
+4. Check if the byte is a newline character.
+   - If so, break out of the loop
+   - If not, add this byte to the buffer.
+5. Return the buffer with the line read from the file descriptor.
+
+## Conclusion
+
+Using the `read` system call, you can write an algorithm to read a line from a file descriptor. This guide has provided an overview of the steps required to achieve this.
+
+## Usage
+Add the code below in the root of this project. Change `textfile.txt` to a file you want to read.
 
 ```
 int main()
@@ -27,3 +42,5 @@ int main()
   return (ret);
 }
 ```
+
+After running this it will print out the file line by line freeing every line it had read.
