@@ -1,5 +1,7 @@
 # Get_next_line
 
+[![CodeFactor](https://www.codefactor.io/repository/github/bdekonin/get_next_line/badge)](https://www.codefactor.io/repository/github/bdekonin/get_next_line)
+
 This guide explains how to write an algorithm to read a line from a file descriptor using the `read` system call.
 
 ## Prerequisites
